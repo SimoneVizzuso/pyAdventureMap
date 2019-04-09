@@ -1,14 +1,16 @@
 from adventure import world
-from adventure.world import Room
 
 
 def play():
-    map = set()
+    map = dict()
     world.loadWorld(map)
-    for room in map:
-        if room.x == world.starting_position_x and room.y == world.starting_position_y:
-            start = room
-    start.printInit()
+    print(world.messageInit)
+    start = str(world.starting_position_x) + "," + str(world.starting_position_y)
+    if start in map:
+        r = map[start]
+        r.print()
+        r.setVisited()
+        r.print()
 
 
 if __name__ == "__main__":

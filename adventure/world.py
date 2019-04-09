@@ -1,7 +1,11 @@
 import uuid
-
 starting_position_x = 0
 starting_position_y = 0
+
+messageInit ="""
+Benvenuto in questo magico mondo, sei pronto ad iniziare la tua avventura?
+Combatterai contro mostri e draghi, in questa ricerca verso l'ignoto
+"""
 
 
 class Room:
@@ -11,29 +15,31 @@ class Room:
         self.x = x
         self.y = y
         self.title = title
-        self.description = str(description)
+        self.description = description
+        self.visited = False
         self.uuid = uuid.uuid1()
 
-    def printInit(self):
-        print("You are in " + self.title + "\n")
+    def print(self):
+        if self.visited:
+            print(">>Ti trovi in " + self.title + "\n Sei già stato in questa stanza\n")
+            return
+        print(">>Ti trovi in " + self.title + "\n")
         self.printDesc()
-
-    def printTitle(self):
-        print("You are in " + self.title + "\n --You've already been in this room--")
-
-    def exist(self, x, y):
-        return self.x == x and self.y == y
 
     def printDesc(self):
         desc = self.description.split(".")
         for elem in desc:
-            print(elem + "\n")
+            print(elem)
+
+    def setVisited(self):
+        self.visited = True
 
 
-def loadWorld(l):
+def loadWorld(d):
     with open("resource/adventureMap") as m:
         lines = m.readlines()
         for line in lines:
             tmp = line.split(";")
             r = Room(int(tmp[0]), int(tmp[1]), tmp[2], tmp[3])
-            l.add(r)
+            key = str(tmp[0]) + "," + str(tmp[1])
+            d[key] = r
