@@ -39,7 +39,7 @@ def loadWorld(d):
     with open("resource/adventureMap") as m:
         lines = m.readlines()
         for line in lines:
-            tmp = line.split(";")
+            tmp = line.replace("\n", "").split(";")
             r = Room(int(tmp[0]), int(tmp[1]), tmp[2], tmp[3])
             key = str(tmp[0]) + "," + str(tmp[1])
             d[key] = r
