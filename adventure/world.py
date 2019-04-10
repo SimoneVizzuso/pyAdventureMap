@@ -4,16 +4,15 @@ starting_position_y = 0
 
 messageInit ="""
 Benvenuto in questo magico mondo, sei pronto ad iniziare la tua avventura?
-Combatterai contro mostri e draghi, in questa ricerca verso l'ignoto
-"""
+Combatterai contro mostri e draghi, in questa ricerca verso l'ignoto"""
 
 
 class Room:
     """Room"""
 
     def __init__(self, x, y, title, description):
-        self.x = x
-        self.y = y
+        self.x = int(x)
+        self.y = int(y)
         self.title = title
         self.description = description
         self.visited = False
@@ -21,9 +20,9 @@ class Room:
 
     def print(self):
         if self.visited:
-            print(">>Ti trovi in " + self.title + "\n Sei già stato in questa stanza\n")
+            print("\n>>Ti trovi in " + self.title + "\n Sei già stato in questa stanza\n")
             return
-        print(">>Ti trovi in " + self.title + "\n")
+        print("\n>>Ti trovi in " + self.title + "\n")
         self.printDesc()
 
     def printDesc(self):
@@ -34,12 +33,17 @@ class Room:
     def setVisited(self):
         self.visited = True
 
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
 
 def loadWorld(d):
     with open("resource/adventureMap") as m:
         lines = m.readlines()
         for line in lines:
-            tmp = line.replace("\n", "").split(";")
+            tmp = line.replace("\n", "").split(",")
             r = Room(int(tmp[0]), int(tmp[1]), tmp[2], tmp[3])
-            key = str(tmp[0]) + "," + str(tmp[1])
-            d[key] = r
+            d.add(r)

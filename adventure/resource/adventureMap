@@ -1,12 +1,12 @@
-0;-1;FirstLeverRoom;bla bla
-0;0;Ingresso della caverna; Sei finito qui in seguito all'inseguimento di alcune guardie della citta. Dopo aver rubato del cibo per fame, sei stato rincorso fino ad ora, finendo di fronte ad una cavità all'interno di una montagna. Avendo paura di farti vedere, decidi di entrare e sperare nella buona fede
-1;0;OldMapRoom;bla bla
-2;0;EmptyRoom;bla bla
--1;0;EmptyRoom;bla bla
--2;0;WeaponRoom;bla bla
--1;1;EmptyRoom;bla bla
--1;2;SecondLeverRoom;bla bla
-0;2;GoblinRoom;bla bla
-1;2;LogicGameRoom;bla bla
--1;3;GolemRoom;bla bla
-1;3;EndRoom;bla bla
+0,-1,FirstLeverRoom,bla bla
+0,0,Ingresso della caverna,Sei finito qui in seguito all'inseguimento di alcune guardie della citta'.Dopo aver rubato del cibo per fame sei stato rincorso fino ad ora finendo di fronte ad una cavita' all'interno di una montagna.Avendo paura di farti vedere decidi di entrare e sperare nella buona fede.Nel momento in cui entri dentro la grotta senti la porta dietro di te chiudersi rumorosamente.Ti accorgi di essere in una stanza illuminata troppo pulita per trattarsi di un luogo abbandonato
+1,0,Stanza delle necessita,Questa stanza e' piena di polvere ma ti sembra di scorgere qualcosa per terra tra la polvere
+2,0,EmptyRoom,bla bla
+-1,0,EmptyRoom,bla bla
+-2,0,WeaponRoom,bla bla
+-1,1,EmptyRoom,bla bla
+-1,2,SecondLeverRoom,bla bla
+0,2,GoblinRoom,bla bla
+1,2,LogicGameRoom,bla bla
+-1,3,GolemRoom,bla bla
+1,3,EndRoom,bla bla
