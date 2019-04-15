@@ -1,14 +1,23 @@
 class Enemy:
     def __init__(self, name, hp, damage):
-        self.name = name
-        self.hp = hp
-        self.damage = damage
+        self.name = str(name)
+        self.hp = int(hp)
+        self.damage = int(damage)
 
     def __str__(self):
-        return 'Appare un {}\nIl nemico ha {} punti ferita\n'.format(self.name, self.hp)
+        return '{}\nIl nemico ha {} punti ferita\n'.format(self.name, self.hp)
 
     def is_alive(self):
         return self.hp > 0
+
+    def getName(self):
+        return '{}'.format(self.name)
+
+    def getDamage(self):
+        return self.damage
+
+    def hit(self, hitDamage):
+        self.hp = self.hp - int(hitDamage)
 
 
 def loadEnemy(enemy_list):

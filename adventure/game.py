@@ -10,10 +10,9 @@ def play():
     enemies.loadEnemy(enemy)
     player = Player()
     player.intro()
-    player.printInventory()
     while player.isAlive() and not player.win():
         player.printAction()
-        player.action(input("\nChe cosa vuoi fare?\n"))
+        player.action(input())
 
 
 if __name__ == "__main__":

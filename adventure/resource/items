@@ -1,5 +1,6 @@
-item,Vecchia Mappa,>>Troverai una uscita a Nord ma conviene esplorare il dungeon. Ad Ovest potrai trovare quaclosa di estremamente potente. Dovrai andare ad Est ma stai attento al Pericolo,Leggi.Raccogli
-weapon,Bastone,>>Un bastone di legno. Puo essere utilizzato per picchiare altre creature,Equipaggia.Raccogli,5
-weapon,Spada,>>Una vecchia spada rovinata che puo comunque uccidere ancora qualche nemico,Equipaggia.Raccogli,20
-scroll,Pergamena della Vita,>>Una pergamena molto strana. Scritta in una lingua antica. Ti sembra di riuscire a leggere la parola CURA,Leggi.Raccogli,cura,100,Ti senti rigenerato
-scroll,Pergamena del Danno,>>Una pergamena rossa scritta con il sangue. Sembra brillare nell'oscurita di un rosso cremisi,Leggi.Raccogli,danno,50,Il nemico ha ricevuto molti danni
+weapon,Bastone,>>Un bastone di legno. Puo essere utilizzato per picchiare altre creature,equipaggia.raccogli,5
+weapon,Spada,>>Una vecchia spada rovinata che puo comunque uccidere ancora qualche nemico,equipaggia.raccogli,25
+dungeonItem,PrimaLeva,>>Una leva di legno che non e' stata mossa da molto,tira,False
+dungeonItem,SecondaLeva,>>Una leva di ferro. Sembra molto Robusta,tira,False
+scroll,PergamenadellaVita,>>Una pergamena molto strana. Scritta in una lingua antica. Ti sembra di riuscire a leggere la parola CURA,leggi.raccogli,cura,100,Ti senti rigenerato
+scroll,PergamenadelDanno,>>Una pergamena rossa scritta con il sangue. Sembra brillare nell'oscurita di un rosso cremisi,leggi.raccogli,danno,50,Il nemico ha ricevuto molti danni
